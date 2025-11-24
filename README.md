@@ -105,3 +105,13 @@ Using hashing algorithms for validation
 Understanding how forensic tools validate integrity
 
 It closely mirrors what tools like FTK Imager, EnCase, and Autopsy do internally.
+
+
+👨‍💻 Authors
+Sudhaharniie Mangesh Thevar
+Sohail Shaikh
+B.Tech – Cloud Technology & Information Security
+
+📄 License
+
+This project is open-source and intended for academic, educational, and research use.
