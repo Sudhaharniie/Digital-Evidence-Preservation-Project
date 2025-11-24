@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload Digital Evidence</title>
+  <style>
+    body { font-family: Arial; text-align: center; background: #f4f4f4; }
+    form { background: white; margin: 100px auto; padding: 30px; width: 400px; border-radius: 10px; }
+    input { margin: 10px; padding: 10px; width: 90%; }
+    input[type=submit] { background: #007BFF; color: white; border: none; cursor: pointer; }
+    a { color: #007BFF; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h2>Digital Evidence Upload</h2>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="text" name="officer" placeholder="Officer Name" required><br>
+    <input type="file" name="file" required><br>
+    <input type="submit" value="Upload">
+  </form>
+  <br>
+  <a href="/view">View Uploaded Evidence</a>
+</body>
+</html>
