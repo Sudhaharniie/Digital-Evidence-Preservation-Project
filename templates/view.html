@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evidence Records</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #0044cc;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: left;
+            word-break: break-all;
+        }
+        th {
+            background: #007bff;
+            color: white;
+            text-transform: uppercase;
+        }
+        tr:nth-child(even) {
+            background: #f2f2f2;
+        }
+        .btn {
+            display: inline-block;
+            margin: 20px 0;
+            background: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Uploaded Evidence Records</h1>
+
+<a href="/" class="btn">Upload Another File</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>File Name</th>
+            <th>Officer</th>
+            <th>Timestamp</th>
+            <th>SHA-256</th>
+            <th>MD5</th>
+            <th>SHA-1</th>
+            <th>SHA-512</th>
+            <th>BLAKE2b</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{ record[0] }}</td>
+            <td>{{ record[1] }}</td>
+            <td>{{ record[2] }}</td>
+            <td>{{ record[3] }}</td>
+            <td>{{ record[4] }}</td>
+            <td>{{ record[5] }}</td>
+            <td>{{ record[6] }}</td>
+            <td>{{ record[7] }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+</body>
+</html>
